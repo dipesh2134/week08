@@ -74,7 +74,7 @@ app = FastAPI(
         "Manages student records and student profile photos "
         "for KoalaTech University."
     ),
-    version="1.0.0",
+    version="1.0.1",
     lifespan=lifespan,
 )
 
@@ -102,4 +102,5 @@ def health_check() -> dict[str, str]:
     return {
         "status": "healthy",
         "service": "student-service",
-    }
+    }# CI demo change 10/09/2026
+# CI demo change 10/09/2026
