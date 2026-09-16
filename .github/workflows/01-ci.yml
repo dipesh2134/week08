@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - main
-  
+
   # Manual trigger for the workflow
   workflow_dispatch:
 
@@ -151,16 +151,16 @@ jobs:
 
       - name: Login to Azure Container Registry
         run: |
-          az acr login --name sit722week08acrdv
+          az acr login --name dipeshsit722acr
 
       - name: Build Docker image
         run: |
           docker build \
             --platform linux/amd64 \
-            -t sit722week08acrdv.azurecr.io/${{ matrix.image }}:${{ github.sha }} \
+            -t dipeshsit722acr.azurecr.io/${{ matrix.image }}:${{ github.sha }} \
             ./${{ matrix.service }}
 
       - name: Push Docker image with commit SHA
         run: |
           docker push \
-            sit722week08acrdv.azurecr.io/${{ matrix.image }}:${{ github.sha }}
+            dipeshsit722acr.azurecr.io/${{ matrix.image }}:${{ github.sha }}

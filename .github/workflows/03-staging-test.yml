@@ -29,8 +29,8 @@ jobs:
       - name: Get AKS credentials
         run: |
           az aks get-credentials \
-            --resource-group sit722-week08-rg \
-            --name sit722-week08-aks \
+            --resource-group sit722-rg \
+            --name sit722week08 \
             --overwrite-existing
 
       - name: Wait for staging frontend IP

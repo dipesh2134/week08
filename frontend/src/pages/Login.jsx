@@ -87,11 +87,12 @@ const Login = () => {
 
   return (
     <Container maxWidth="sm">
-      <Card sx={{ mt: 10 }}>
+      <Card sx={{ mt: 10, bgcolor: "#FFF3E0" }}>
         <CardContent sx={{ p: 4 }}>
           <Typography
             variant="h4"
             gutterBottom
+            sx={{ color: "#C62828" }}
           >
             KoalaTech University
           </Typography>
@@ -100,7 +101,7 @@ const Login = () => {
             color="text.secondary"
             sx={{ mb: 3 }}
           >
-            Sign in to continue
+            Sign in to continue - Continuous Deployment (Task 9.3C)
           </Typography>
 
           {error && (

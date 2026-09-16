@@ -1,0 +1,11 @@
+grafana:
+  adminPassword: "Admin@SIT722"
+  service:
+    type: LoadBalancer
+prometheus:
+  service:
+    type: LoadBalancer
+  prometheusSpec:
+    retention: 7d
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
